@@ -14,5 +14,4 @@ public class Communication {
         datagramSocket = new DatagramSocket(this.port);
         this.serverAddress = InetAddress.getByName(serverAddress);
     }
-
 }
