@@ -1,4 +1,7 @@
-package com.company.Shared;
+package com.company.Client;
+
+import com.company.Shared.Commands.Command;
+import com.company.Shared.Commands.DataBoxHandler;
 
 import java.util.Scanner;
 
@@ -6,7 +9,7 @@ public class CommandReader {
     public void readConsoleCommand() {
         String currentCommand;
         Scanner keyboard = new Scanner(System.in);
-        CommandSender commandSender = new CommandSender();
+        CommandHandler commandSender = new CommandHandler();
 
         System.out.print("\nEnter the command: ");
         while (!((currentCommand = keyboard.nextLine().toUpperCase()).equals("EXIT"))) {

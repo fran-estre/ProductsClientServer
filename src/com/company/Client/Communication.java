@@ -1,8 +1,8 @@
 package com.company.Client;
 
-import com.company.Shared.PartsGenerator;
-import com.company.Shared.Serialization;
-import com.company.Shared.SizeMessage;
+import com.company.Shared.Commands.PartsGenerator;
+import com.company.Shared.Commands.Serialization;
+import com.company.Shared.Commands.SizeMessage;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

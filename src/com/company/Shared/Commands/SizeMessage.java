@@ -1,4 +1,4 @@
-package com.company.Shared;
+package com.company.Shared.Commands;
 
 import java.io.Serializable;
 

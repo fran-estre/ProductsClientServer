@@ -1,9 +1,7 @@
-package com.company.Shared;
+package com.company.Shared.Commands;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.net.DatagramPacket;
 import java.util.ArrayList;
 
 public class PartsGenerator {
