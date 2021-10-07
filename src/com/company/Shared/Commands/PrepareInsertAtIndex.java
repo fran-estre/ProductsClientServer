@@ -1,5 +1,8 @@
 package com.company.Shared.Commands;
 
+import com.company.Shared.Entities.Product;
+import com.company.Shared.ProductReader;
+
 public class PrepareInsertAtIndex extends PrepareCommand {
 
     @Override
@@ -22,6 +25,13 @@ public class PrepareInsertAtIndex extends PrepareCommand {
             comments.append("The command is invalid.");
             return null;
         }
+        Product product = readProduct();
+        dataBox.setProduct(product);
         return dataBox;
+    }
+
+    private static Product readProduct() {
+        ProductReader productReader = new ProductReader();
+        return productReader.createProduct();
     }
 }
