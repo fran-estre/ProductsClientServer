@@ -4,19 +4,19 @@ import java.io.Serializable;
 
 
 public class Command implements Serializable {
-    private DataBox dataCommand;
+    private DataBox dataBox;
     private CommandType commandType;
 
     public Command() {
 
     }
 
-    public DataBox getDataCommand() {
-        return dataCommand;
+    public DataBox getDataBox() {
+        return dataBox;
     }
 
-    public void setDataCommand(DataBox dataCommand) {
-        this.dataCommand = dataCommand;
+    public void setDataBox(DataBox dataBox) {
+        this.dataBox = dataBox;
     }
 
     public CommandType getCommandType() {

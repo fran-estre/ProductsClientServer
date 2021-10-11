@@ -1,12 +1,14 @@
 package com.company.Shared.Entities;
 
+import java.io.Serializable;
+
 /**
  * Coordinates class
  *  the address of the product
  * @author Francisco Estrella
  * @version 0.1
  */
-public class Coordinates {
+public class Coordinates implements Serializable {
     private Double x; //Значение поля должно быть больше -656, Поле не может быть null
     private Double y; //Значение поля должно быть больше -816, Поле не может быть null
 

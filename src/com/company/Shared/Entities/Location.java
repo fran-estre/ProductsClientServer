@@ -1,12 +1,14 @@
 package com.company.Shared.Entities;
 
+import java.io.Serializable;
+
 /**
  * Location class
  *location of the organization
  * @author Francisco Estrella
  * @version 0.1
  */
-public class Location {
+public class Location implements Serializable {
     private double x;
     private long y;
     private Long z; //Поле не может быть null

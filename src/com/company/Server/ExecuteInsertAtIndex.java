@@ -2,9 +2,6 @@ package com.company.Server;
 
 import com.company.Shared.Commands.Command;
 
-import java.util.Scanner;
-import java.util.Vector;
-
 public class ExecuteInsertAtIndex extends ExecuteCommand {
 
     @Override
@@ -13,7 +10,7 @@ public class ExecuteInsertAtIndex extends ExecuteCommand {
             int indexValue;
             do {
                 StringBuilder stringBuilder = new StringBuilder();
-                indexValue = ParseAll.tryParseInt(command.getDataCommand().getIndex().toString(), 0, stringBuilder);
+                indexValue = ParseAll.tryParseInt(command.getDataBox().getIndex().toString(), 0, stringBuilder);
                 if (stringBuilder.length() > 0) {
                     System.out.println("The value was incorrect, enter a valid value");
                 } else {
@@ -21,8 +18,8 @@ public class ExecuteInsertAtIndex extends ExecuteCommand {
                 }
             } while (true);
 
-            ServerApp.products.add(command.getDataCommand().getProduct());
+            ServerApp.products.add(command.getDataBox().getProduct());
         }
-        return "the Product vas inserted at :" + command.getDataCommand().getIndex().toString();
+        return "the Product vas inserted at :" + command.getDataBox().getIndex().toString();
     }
 }

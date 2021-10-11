@@ -6,7 +6,7 @@ public class PrepareRemoveGreater extends PrepareCommand {
     public boolean execute(boolean isInteractive, Command command, DataBox dataBox, String[] parts, StringBuilder comments) {
         command.setCommandType(CommandType.REMOVE_GREATER);
         dataBox = readDataCommandId(parts, comments);
-        command.setDataCommand(dataBox);
+        command.setDataBox(dataBox);
         return dataBox != null;
     }
 

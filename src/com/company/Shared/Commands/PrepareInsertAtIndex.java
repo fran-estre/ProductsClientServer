@@ -9,7 +9,7 @@ public class PrepareInsertAtIndex extends PrepareCommand {
     public boolean execute(boolean isInteractive, Command command, DataBox dataBox, String[] parts, StringBuilder comments) {
         command.setCommandType(CommandType.INSERT_AT_INDEX);
         dataBox = readDataCommandId(parts, comments);
-        command.setDataCommand(dataBox);
+        command.setDataBox(dataBox);
         return dataBox != null;
     }
 

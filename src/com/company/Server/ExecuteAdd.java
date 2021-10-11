@@ -3,15 +3,14 @@ package com.company.Server;
 import com.company.Shared.Commands.Command;
 import com.company.Shared.Entities.Product;
 
-import java.util.Vector;
-
 public class ExecuteAdd extends ExecuteCommand {
 
     @Override
     public String execute(Command command) {
-        command.getDataCommand().getProduct().setId(getProductId());
-        command.getDataCommand().getProduct().getManufacturer().setId(getIdOrganization());
-        ServerApp.products.add(command.getDataCommand().getProduct());
+        Product product=command.getDataBox().getProduct();
+        product.setId(getProductId());
+        product.getManufacturer().setId(getIdOrganization());
+        ServerApp.products.add(product);
         return "The dragon was inserted.";
     }
 

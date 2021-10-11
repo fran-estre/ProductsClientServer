@@ -1,12 +1,14 @@
 package com.company.Shared.Entities;
 
+import java.io.Serializable;
+
 /**
  * Organization class
  * instances the organization of the product
  * @author Francisco Estrella
  * @version 0.1
  */
-public class Organization {
+public class Organization implements Serializable {
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private String fullName; //Значение этого поля должно быть уникальным, Длина строки не должна быть больше 1014, Поле не может быть null

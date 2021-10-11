@@ -12,7 +12,7 @@ public class PrepareExecuteScript extends PrepareCommand {
 
         command.setCommandType(CommandType.EXECUTE_SCRIPT);
         dataBox = readDataCommandExecuteScript(parts, comments);
-        command.setDataCommand(dataBox);
+        command.setDataBox(dataBox);
         return dataBox != null;
     }
 

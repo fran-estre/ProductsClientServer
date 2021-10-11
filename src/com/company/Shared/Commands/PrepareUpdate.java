@@ -12,7 +12,7 @@ public class PrepareUpdate extends PrepareCommand {
 
         command.setCommandType(CommandType.UPDATE);
         dataBox = readDataCommandUpdate(parts,comments);
-        command.setDataCommand(dataBox);
+        command.setDataBox(dataBox);
         return dataBox != null;
     }
 

@@ -1,4 +1,5 @@
 package com.company.Client;
+
 import com.company.Shared.Commands.Command;
 import com.company.Shared.Commands.DataBox;
 import com.company.Shared.Commands.Serialization;
@@ -15,8 +16,13 @@ public class CommandHandler {
             if (ClientApp.getCommunication().send(data)) {
                 StringBuilder errors = new StringBuilder();
                 byte[] response = ClientApp.getCommunication().receive(errors);
-                DataBox dataBox = (DataBox) Serialization.deserialize(response);
-                return dataBox.getResponse();
+                Command command1 = (Command) Serialization.deserialize(response);
+                DataBox dataBox = command1.getDataBox();
+                if (dataBox != null)
+                    return dataBox.getResponse();
+                else {
+                    return "nothing";
+                }
             }
             return "The command was not sent";
         } catch (IOException e) {

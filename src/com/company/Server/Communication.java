@@ -1,6 +1,7 @@
 package com.company.Server;
 
 import com.company.Shared.Commands.*;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.*;
@@ -12,7 +13,7 @@ public class Communication {
         datagramSocket = new DatagramSocket(port);
     }
 
-    public void  listen() {
+    public void listen() {
         try {
             System.out.println("Server working at " + InetAddress.getLocalHost());
         } catch (UnknownHostException e) {
@@ -27,6 +28,7 @@ public class Communication {
             try {
                 datagramSocket.receive(datagramPacket);
                 SizeMessage sizeMessage = (SizeMessage) Serialization.deserialize(datagramPacket.getData());
+                System.out.println("the size message is: " + sizeMessage.Size);
                 if (sizeMessage.Size <= 0) continue;
 
                 ByteArrayOutputStream bos = new ByteArrayOutputStream();

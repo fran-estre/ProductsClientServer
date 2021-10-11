@@ -17,9 +17,8 @@ import static com.company.Server.ServerApp.products;
 
 public class ProcessHandler {
     public static String processCommand(Command command) {
-        DataBox dataBox = null;
         try {
-            Class cls = Class.forName("com.company.Serve.Execute" + getClassName(command.getCommandType().toString()));
+            Class cls = Class.forName("com.company.Server.Execute" + getClassName(command.getCommandType().toString()));
             ExecuteCommand myTestObject = (ExecuteCommand) cls.newInstance();
             return myTestObject.execute(command);
         } catch (ClassNotFoundException e) {

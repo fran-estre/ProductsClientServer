@@ -3,8 +3,6 @@ package com.company.Server;
 import com.company.Shared.Commands.Command;
 import com.company.Shared.Entities.Product;
 
-import java.util.Vector;
-
 public class ExecuteRemoveById extends ExecuteCommand {
 
     @Override
@@ -12,7 +10,7 @@ public class ExecuteRemoveById extends ExecuteCommand {
         int idValue;
         do {
             StringBuilder stringBuilder = new StringBuilder();
-            idValue = ParseAll.tryParseInt(command.getDataCommand().getId().toString(), 0, stringBuilder);
+            idValue = ParseAll.tryParseInt(command.getDataBox().getId().toString(), 0, stringBuilder);
             if (stringBuilder.length() > 0) {
                 System.out.println("The value was incorrect, enter a valid value");
             } else {

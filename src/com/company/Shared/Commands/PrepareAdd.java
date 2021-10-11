@@ -12,7 +12,7 @@ public class PrepareAdd extends PrepareCommand {
 
         command.setCommandType(CommandType.ADD);
         dataBox = readDataCommandAdd();
-        command.setDataCommand(dataBox);
+        command.setDataBox(dataBox);
         return dataBox != null;
     }
 

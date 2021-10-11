@@ -1,12 +1,14 @@
 package com.company.Shared.Entities;
 
+import java.io.Serializable;
+
 /**
  * Address class
  * the address of the organization
  * @author Francisco Estrella
  * @version 0.1
  */
-public class Address {
+public class Address implements Serializable {
     private String zipCode; //Длина строки не должна быть больше 30, Поле не может быть null
     private Location town; //Поле может быть null
 

@@ -9,7 +9,7 @@ public class ExecuteExecuteScript extends ExecuteCommand {
     public String execute(Command command) {
 
         StringBuilder dataFile = new StringBuilder();
-        dataFile.append(command.getDataCommand().getDataFile());
+        dataFile.append(command.getDataBox().getDataFile());
         if (dataFile.length() <= 0) {
             return "The file was empty.";
         }
