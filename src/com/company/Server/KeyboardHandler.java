@@ -13,7 +13,7 @@ public class KeyboardHandler implements Runnable {
             if (data.equals("SAVE")) {
                 ExecuteSave executeSave = new ExecuteSave();
                 try {
-                    executeSave.execute(null);
+                    System.out.println(executeSave.execute(null));
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
                 }

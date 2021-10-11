@@ -1,0 +1,1 @@
+[{"id":1,"name":"a","coordinates":{"x":1.0,"y":1.0},"creationDate":"2021-10-11T07:28:04.721","price":1,"partNumber":"1","unitOfMeasure":"METERS","manufacturer":{"id":1,"name":"1","fullName":"1","annualTurnover":1.0,"employeesCount":1,"officialAddress":{"zipCode":"1","town":{"x":1.0,"y":1,"z":1}}}}]
