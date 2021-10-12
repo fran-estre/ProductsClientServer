@@ -6,21 +6,21 @@ public class ExecuteHelp extends ExecuteCommand {
 
     @Override
     public String execute(Command command) {
-        return "help : вывести справку по доступным командам" +
-                "\ninfo : вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)" +
-                "\nshow : вывести в стандартный поток вывода все элементы коллекции в строковом представлении" +
-                "\ninsert : добавить новый элемент с заданным ключом" +
-                "\nupdate id : обновить значение элемента коллекции, id которого равен заданному" +
-                "\nremove_key id : удалить элемент из коллекции по его ключу" +
-                "\nclear : очистить коллекцию" +
-                "\nsave : сохранить коллекцию в файл" +
-                "\nexecute_script file_name : считать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме." +
-                "\nexit : завершить программу (без сохранения в файл)" +
-                "\nreplace_if_greater key age : заменить значение по ключу, если новое значение больше старого" +
-                "\nreplace_if_lowe key age : заменить значение по ключу, если новое значение меньше старого" +
-                "\nremove_greater_key key : удалить из коллекции все элементы, ключ которых превышает заданный" +
-                "\ncount_by_character character : вывести количество элементов, значение поля character которых равно заданному" +
-                "\nfilter_less_than_killer killer : вывести элементы, значение поля killer которых меньше заданного" +
-                "\nprint_unique_character : вывести уникальные значения поля character всех элементов в коллекции";
+        return "help : display help for available commands " +
+                "\ninfo : output information about the collection (type, initialization date, number of elements, etc.) to the standard output stream.)" +
+                "\nshow : output all the elements of the collection in a string representation to the standard output stream" +
+                "\nadd : add a new item to the collection" +
+                "\nupdate id: update the value of a collection element whose id is equal to the specified one" +
+                "\nremove_by_id id : delete an item from the collection by its id" +
+                "\nclear : clear the collection" +
+                "\nsave : save the collection to a file" +
+                "\nexecute_script file_name : read and execute the script from the specified file. The script contains commands in the same form as they are entered by the user in interactive mode." +
+                "\nexit : end the program (without saving it to a file)" +
+                "\ninsert_at index : add a new element to the specified position" +
+                "\nremove_last : delete the last item from the collection" +
+                "\nremove_greater : remove all items from the collection that exceed the specified limit" +
+                "\nremove_all_by_manufacturer manufacturer : remove all items from the collection whose manufacturer field value is equivalent to the specified one" +
+                "\ngroup_counting_by_part_number : group the elements of the collection by the value of the partNumber field, output the number of elements in each group" +
+                "\nprint_field_ascending_manufacturer : output the values of the manufacturer field of all elements in ascending order";
     }
 }
