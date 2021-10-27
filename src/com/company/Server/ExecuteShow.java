@@ -16,4 +16,5 @@ public class ExecuteShow extends ExecuteCommand {
         ServerApp.products.forEach(k -> dataProduct.append("\n").append(k.toString()));
         return dataProduct.toString();
     }
+
 }
