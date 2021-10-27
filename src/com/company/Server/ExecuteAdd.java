@@ -11,7 +11,7 @@ public class ExecuteAdd extends ExecuteCommand {
         product.setId(getProductId());
         product.getManufacturer().setId(getIdOrganization());
         ServerApp.products.add(product);
-        return "The dragon was inserted.";
+        return "The product was inserted.";
     }
 
     private static Integer getProductId() {

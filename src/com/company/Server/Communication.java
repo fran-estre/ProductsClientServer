@@ -28,6 +28,7 @@ public class Communication {
             try {
                 datagramSocket.receive(datagramPacket);
                 SizeMessage sizeMessage = (SizeMessage) Serialization.deserialize(datagramPacket.getData());
+                System.out.println("the message was received");
                 System.out.println("the size message is: " + sizeMessage.Size);
                 if (sizeMessage.Size <= 0) continue;
 
@@ -43,6 +44,7 @@ public class Communication {
                 Command command = (Command) Serialization.deserialize(buffer);
                 String response = processHandler.processCommand(command);
                 AnswerToClient(datagramPacket.getAddress(), datagramPacket.getPort(), response);
+                System.out.println("the message was sent");
             } catch (IOException e) {
                 e.printStackTrace();
                 System.out.println("There was an exception while receiving the datagramPacket " + e.getMessage());

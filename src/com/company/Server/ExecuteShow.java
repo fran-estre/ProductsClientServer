@@ -9,7 +9,7 @@ public class ExecuteShow extends ExecuteCommand {
     @Override
     public String execute(Command command) {
         if (ServerApp.products.isEmpty()) {
-            return "There are no dragons";
+            return "There are no products";
         }
         StringBuilder dataProduct = new StringBuilder();
 
